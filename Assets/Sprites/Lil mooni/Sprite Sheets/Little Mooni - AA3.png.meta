@@ -1,0 +1,428 @@
+fileFormatVersion: 2
+guid: 5ee156567d7d1d54fae4119a96c8e8f0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7469953408644483494
+    second: Little Mooni - AA3_0
+  - first:
+      213: 45118037867775607
+    second: Little Mooni - AA3_1
+  - first:
+      213: -1179257982480845453
+    second: Little Mooni - AA3_2
+  - first:
+      213: -3078457302184949782
+    second: Little Mooni - AA3_3
+  - first:
+      213: -3911455614722085148
+    second: Little Mooni - AA3_4
+  - first:
+      213: 7568193217270056135
+    second: Little Mooni - AA3_5
+  - first:
+      213: -2333803349582767595
+    second: Little Mooni - AA3_6
+  - first:
+      213: -6815281965812156053
+    second: Little Mooni - AA3_7
+  - first:
+      213: 5982261485029139688
+    second: Little Mooni - AA3_8
+  - first:
+      213: -1398407104017170183
+    second: Little Mooni - AA3_9
+  - first:
+      213: 5558187118967702325
+    second: Little Mooni - AA3_10
+  - first:
+      213: -3006421635519233160
+    second: Little Mooni - AA3_11
+  - first:
+      213: -4123095524142635541
+    second: Little Mooni - AA3_12
+  - first:
+      213: -5844447089496588897
+    second: Little Mooni - AA3_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Little Mooni - AA3_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 63
+        width: 53
+        height: 39
+      alignment: 9
+      pivot: {x: 0.15, y: 0.41}
+      border: {x: 0, y: 0, z: 24, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a56f60dc3f4655890800000000000000
+      internalID: -7469953408644483494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - AA3_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 63
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 7, w: 15}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 776421ccd9a40a000800000000000000
+      internalID: 45118037867775607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - AA3_2
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 63
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 7, w: 14}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3757fa7ec1f62afe0800000000000000
+      internalID: -1179257982480845453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - AA3_3
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 63
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 14, w: 13}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae70f0fd46f1745d0800000000000000
+      internalID: -3078457302184949782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - AA3_4
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 63
+        width: 59
+        height: 32
+      alignment: 9
+      pivot: {x: 0.18, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 15}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ee68c997d7b7b9c0800000000000000
+      internalID: -3911455614722085148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - AA3_5
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 63
+        width: 59
+        height: 32
+      alignment: 9
+      pivot: {x: 0.15, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 16}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c407e212af970960800000000000000
+      internalID: 7568193217270056135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - AA3_6
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 63
+        width: 60
+        height: 32
+      alignment: 9
+      pivot: {x: 0.15, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51a9084f73aac9fd0800000000000000
+      internalID: -2333803349582767595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - AA3_8
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 63
+        width: 62
+        height: 32
+      alignment: 9
+      pivot: {x: 0.15, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e4a9a01023450350800000000000000
+      internalID: 5982261485029139688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - AA3_11
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 63
+        width: 62
+        height: 32
+      alignment: 9
+      pivot: {x: 0.15, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 873c3d1837b0746d0800000000000000
+      internalID: -3006421635519233160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - AA3_12
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 63
+        width: 62
+        height: 32
+      alignment: 9
+      pivot: {x: 0.15, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be5a9744772d7c6c0800000000000000
+      internalID: -4123095524142635541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - AA3_13
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 63
+        width: 66
+        height: 32
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9d7df9565a54eea0800000000000000
+      internalID: -5844447089496588897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7484d225bb978bd4795476d43299016a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Little Mooni - AA3_0: -7469953408644483494
+      Little Mooni - AA3_1: 45118037867775607
+      Little Mooni - AA3_10: 5558187118967702325
+      Little Mooni - AA3_11: -3006421635519233160
+      Little Mooni - AA3_12: -4123095524142635541
+      Little Mooni - AA3_13: -5844447089496588897
+      Little Mooni - AA3_2: -1179257982480845453
+      Little Mooni - AA3_3: -3078457302184949782
+      Little Mooni - AA3_4: -3911455614722085148
+      Little Mooni - AA3_5: 7568193217270056135
+      Little Mooni - AA3_6: -2333803349582767595
+      Little Mooni - AA3_7: -6815281965812156053
+      Little Mooni - AA3_8: 5982261485029139688
+      Little Mooni - AA3_9: -1398407104017170183
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
