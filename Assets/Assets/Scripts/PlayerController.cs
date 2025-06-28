@@ -1,112 +1,109 @@
 using UnityEngine;
+using System.Collections; // Thư viện xài Coroutines
 
 public class PlayerController : MonoBehaviour
 {
-    public Rigidbody2D rb;
+public Rigidbody2D rb;
     public Animator animator;
 
     public float moveSpeed = 5f;
     public float jumpForce = 15f;
 
-    // For more robust ground checking
-    public Transform groundCheck; // Assign an empty GameObject as a child slightly below the player's feet
-    public LayerMask groundLayer; // Set this in the Inspector to your "Ground" layer(s)
-    public float groundCheckRadius = 0.2f; // Adjust this radius as needed for your player size
-
     public bool isFacingRight = true; // Biến để theo dõi hướng của nhân vật
-
-    // Renamed for clarity: this now represents if the player is currently touching the ground
-    private bool _isCurrentlyGrounded = false; // Using a private backing field
-
+    public bool canMove = true; // Controls whether player can move or take input
+    private bool isHealing = false; // Flag to prevent multiple heals
+    private bool isAttacking = false; // Flag to prevent actions while attacking
+    private bool isGrounded = false; // Checks if player is on the ground
+    private int comboStep = 0; // Current step in the combo sequence (0 = ready for AA1)
+    private float lastAttackTime; // Time when the last attack was triggered
+    public float maxComboDelay = 1f;
     void Start()
     {
-        // Get components if not already assigned in Inspector
-        if (rb == null)
-            rb = GetComponent<Rigidbody2D>();
-        if (animator == null)
-            animator = GetComponent<Animator>();
-
-        // Ensure groundCheck is assigned
-        if (groundCheck == null)
-        {
-            Debug.LogError("GroundCheck Transform is not assigned! Jumping and grounding logic will not work correctly.", this);
-        }
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        // *** NEW: Continuous Ground Check ***
-        // This is the most important change. It constantly updates _isCurrentlyGrounded.
-        _isCurrentlyGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-
-        // *** Update Animator's isJumping parameter based on current ground state ***
-        // This will now correctly transition into "Jump" when airborne and out when grounded.
-        animator.SetBool("isJumping", !_isCurrentlyGrounded);
-
-        float moveInput = 0f;
-
-        if (Input.GetKey(KeyCode.A))
+        // Kiểm tra heal để set canMove
+        if (Input.GetKeyDown(KeyCode.S) && !isHealing && isGrounded && !isAttacking)
         {
-            moveInput = -1f;
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            moveInput = 1f;
+            StartCoroutine(HealRoutine());
+            return;
         }
 
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
-
-        // *** Jumping Logic ***
-        // Only allow jump if currently grounded.
-        // No need to manually set _isCurrentlyGrounded = false here; the ground check handles it.
-        if (Input.GetKeyDown(KeyCode.W) && _isCurrentlyGrounded)
+        if (Input.GetMouseButtonDown(0) && !isHealing && !isAttacking)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            // animator.SetBool("isJumping", true); // No need to set here, handled by the continuous check above
+            HandleComboAttack();
+            return;
         }
-
-        Flip();
-
-        if (Mathf.Abs(moveInput) > 0.01f) // Use a small epsilon to avoid floating point issues near zero
+        // Nếu kh có hành động nào ngăn canMove
+        if (canMove && !isAttacking && !isHealing)
         {
-            animator.SetBool("isRunning", true);
+            float moveInput = 0f;
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                moveInput = -1f;
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                moveInput = 1f;
+            }
+
+            rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+
+            if (Input.GetKeyDown(KeyCode.W) && isGrounded)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+                isGrounded = false;
+            }
+
+            Flip(); // Flip logic based on current movement input
+
+            // Update running animation bool
+            if (Mathf.Abs(moveInput) != 0f)
+            {
+                animator.SetBool("isRunning", true);
+            }
+            else
+            {
+                animator.SetBool("isRunning", false);
+            }
+
+
+            // Ham Dash
+            if (Input.GetKeyDown(KeyCode.LeftShift) && isGrounded)
+            {
+                animator.SetTrigger("Dash");
+                Dash();
+            }
         }
-        else
+        else // Khi không di chuyển. đảm bảo canMove
         {
-            animator.SetBool("isRunning", false);
+            // Stop horizontal movement
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+            animator.SetBool("isRunning", false); // Đảm bảo cho animation idle hoạt động
         }
-
-        if (Input.GetMouseButtonDown(0))
+        if (comboStep != 0 && Time.time - lastAttackTime > maxComboDelay)
         {
-            animator.SetTrigger("AA1");
-        }
-
-        if (Input.GetKeyDown(KeyCode.S)) 
-        {
-            animator.SetTrigger("S"); // Renamed to "HealTrigger" or similar in Animator
-        }
-
-        // Ham Dash
-        if (Input.GetKeyDown(KeyCode.LeftShift) && _isCurrentlyGrounded) // Only allow dash if grounded
-        {
-            animator.SetTrigger("Dash");
-            Dash();
+            comboStep = 0; // Reset combo if timeout
         }
     }
-
-
 
     void Flip()
     {
         // Quay nhân vật theo hướng di chuyển
-        if (rb.linearVelocity.x > 0.01f && !isFacingRight) 
+        float currentMoveInput = Input.GetAxisRaw("Horizontal");
+
+        if (currentMoveInput > 0 && !isFacingRight) // Moving right
         {
             Vector3 scale = transform.localScale;
             scale.x = Mathf.Abs(scale.x); // đảm bảo scale.x dương
             transform.localScale = scale;
             isFacingRight = true;
         }
-        else if (rb.linearVelocity.x < -0.01f && isFacingRight) // Use Rigidbody velocity
+        else if (currentMoveInput < 0 && isFacingRight) // Moving left
         {
             Vector3 scale = transform.localScale;
             scale.x = -Mathf.Abs(scale.x); // đảm bảo scale.x âm
@@ -114,30 +111,114 @@ public class PlayerController : MonoBehaviour
             isFacingRight = false;
         }
     }
+    // Check ground khi chạm đất
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        foreach (ContactPoint2D contact in collision.contacts)
+        {
+            if (contact.normal.y > 0.5f)
+            {
+                isGrounded = true;
+            }
+        }
+    }
+
+    // Check ground khi rơi
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (isGrounded && rb.linearVelocity.y < -0.1f)
+        {
+            isGrounded = false;
+        }
+    }
 
     void Dash()
     {
-        float dashSpeed = 10f; // bạn có thể chỉnh số này
-        float dashDuration = 0.2f;
+        float dashSpeed = 20f; // có thể chỉnh số này
+        float dashDuration = 0.4f;
 
         Vector2 dashDirection = isFacingRight ? Vector2.right : Vector2.left;
-        rb.linearVelocity = dashDirection * dashSpeed; // Instantaneous velocity change for dash
+        rb.linearVelocity = dashDirection * dashSpeed;
 
-
-        Invoke(nameof(StopDash), dashDuration);
+        // Changed from Invoke to Coroutine for better control
+        StartCoroutine(StopDashRoutine(dashDuration));
     }
 
-    void StopDash()
+    // Coroutine for stopping dash
+    IEnumerator StopDashRoutine(float duration)
     {
-        
-        rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+        yield return new WaitForSeconds(duration);
+        rb.linearVelocity = Vector2.zero; // dừng lại sau khi dash
     }
 
-
-    void OnDrawGizmosSelected()
+    // Coroutine for healing
+    private IEnumerator HealRoutine()
     {
-        if (groundCheck == null) return;
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+        isHealing = true; // Chống 2 heal chồng lên nhau
+        canMove = false;  // Ngăn không cho di chuyển trong khi heal
+
+        Debug.Log("Healing started: Player cannot move.", this);
+
+        // Heal Animation
+        if (animator != null)
+        {
+            animator.SetTrigger("Heal");
+        }
+        // Chờ hết heal
+        yield return new WaitForSeconds(1.3f);
+
+        // Bật canMove
+        canMove = true;
+        isHealing = false;
+        Debug.Log("Healing finished: Player can move again.", this);
     }
+
+void HandleComboAttack()
+    {
+        lastAttackTime = Time.time; // Update the last attack time *before* incrementing comboStep for accurate timing
+        if (comboStep == 0 || (Time.time - lastAttackTime > maxComboDelay && comboStep != 0)) // Check if starting fresh
+        {
+            comboStep = 1; // Start with AA1
+        }
+        else
+        {
+            comboStep++; // Otherwise, increment for the next step in the combo chain
+        }
+            // Trigger the corresponding animation
+        if (comboStep == 1)
+        {
+            animator.SetTrigger("AA1");
+            Debug.Log("Combo Attack 1 (AA1)");
+        }
+        else if (comboStep == 2)
+        {
+            animator.SetTrigger("AA2");
+            Debug.Log("Combo Attack 2 (AA2)");
+        }
+        else if (comboStep == 3)
+        {
+            animator.SetTrigger("AA3");
+            Debug.Log("Combo Attack 3 (AA3) - Combo Finished");
+        }
+
+        // Set isAttacking to true the moment ANY attack is initiated
+        isAttacking = true;
+    }
+
+    // --- Animation Events (called from Animator) ---
+
+    // Called at the point in the animation where player can input next action or move.
+    public void OnAttackAnimationEnd()
+    {
+        isAttacking = false; // Player is no longer in an attack animation
+        Debug.Log("OnAttackAnimationEnd: Player can now move/start next action.");
+    }
+
+    // Called specifically from the AA3 animation clip at its end to fully reset the combo
+    public void ResetCombo()
+    {
+        comboStep = 0;
+        Debug.Log("ComboStep reset via AA3 Animation Event.");
+    }
+
 }

@@ -176,16 +176,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3598dd4b0b68a0282874618209efc84e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  animator: {fileID: 0}
+  rb: {fileID: 6583176780094494926}
+  animator: {fileID: 1104183563196413953}
   moveSpeed: 5
   jumpForce: 7
-  groundCheck: {fileID: 0}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  groundCheckRadius: 0.2
   isFacingRight: 1
+  canMove: 1
+  maxComboDelay: 1
 --- !u!95 &1104183563196413953
 Animator:
   serializedVersion: 7
