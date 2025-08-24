@@ -232,8 +232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1802827412e62d743b67b920ffb0cc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  animator: {fileID: 0}
+  rb: {fileID: 6583176780094494926}
+  animator: {fileID: 1104183563196413953}
   healthManager: {fileID: 0}
   moveSpeed: 5
   jumpForce: 25
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  currentHealth: 0
+  currentHealth: 50
   maxHealth: 100
   damageOnHit: 10
 --- !u!114 &-1359883798535728288

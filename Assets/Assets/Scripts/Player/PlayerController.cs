@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Animator animator;
-    public HealthManager healthManager;
+    public HealthManager healthManager ;
 
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
@@ -20,15 +20,16 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        healthManager = GetComponent<HealthManager>();
+
         if (rb == null || animator == null || healthManager == null)
         {
             Debug.LogError("Missing component: Rigidbody2D, Animator, or HealthManager!");
             enabled = false;
             return;
         }
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        healthManager = GetComponent<HealthManager>();
         currentState = new IdleState(this); // Khởi tạo chắc chắn với IdleState
         Debug.Log("Starting state: " + currentState.GetType().Name);
     }

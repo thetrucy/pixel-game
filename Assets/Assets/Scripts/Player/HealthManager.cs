@@ -54,7 +54,16 @@ public class HealthManager : MonoBehaviour
     void Die()
     {
         Debug.Log("Player has died.");
+        // Find the PlayerController script on this same GameObject
+        PlayerController playerController = GetComponent<PlayerController>();
+
+        // Disable the player controller to stop movement and input
+        if (playerController != null)
+        {
+        playerController.enabled = false;
+        }
         Destroy(gameObject);
+        FindFirstObjectByType<GameManager>().PlayerLoses();
     }
 
     void UpdateHealthBar()
