@@ -100,6 +100,16 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+<<<<<<< Updated upstream
+=======
+  - time: 0
+    functionName: EnableAttackCollider
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+>>>>>>> Stashed changes
   - time: 0.5
     functionName: ResetCombo
     data: 
@@ -107,3 +117,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+<<<<<<< Updated upstream
+=======
+  - time: 0.5
+    functionName: DisableAttackCollider
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+>>>>>>> Stashed changes

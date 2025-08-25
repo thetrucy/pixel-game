@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 8eef8fd93652fd6a196ef4473bd05735
+=======
+guid: 95d9238cd60ab7144bded63fdc957d30
+>>>>>>> Stashed changes
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -222,11 +226,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+<<<<<<< Updated upstream
     nameFileIdTable:
       Death12_0: 7404580921635197883
       Death12_1: -3993026893958937840
       Death12_2: -4915539442020209036
       Death12_3: 3306475799429161476
+=======
+    nameFileIdTable: {}
+>>>>>>> Stashed changes
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

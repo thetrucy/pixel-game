@@ -44,9 +44,15 @@ GameObject:
   - component: {fileID: 6583176780094494926}
   - component: {fileID: 1292848222818876353}
   - component: {fileID: 1104183563196413953}
+<<<<<<< Updated upstream
   - component: {fileID: 827638435090744828}
   - component: {fileID: 1342051387724127103}
   - component: {fileID: 4615236081810157417}
+=======
+  - component: {fileID: 8221059059035787698}
+  - component: {fileID: 3542286583053208673}
+  - component: {fileID: 7589695571222959921}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -67,7 +73,11 @@ Transform:
   m_LocalScale: {x: 5.96008, y: 5.96008, z: 5.96008}
   m_ConstrainProportionsScale: 0
   m_Children:
+<<<<<<< Updated upstream
   - {fileID: 4254130567614482187}
+=======
+  - {fileID: 4908306697830329336}
+>>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5513627871498706915
@@ -139,9 +149,9 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_AngularDamping: 0
+  m_GravityScale: 10
+  m_Material: {fileID: 6200000, guid: 4ea39f1b093dcc844a4b69108f8d7418, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -162,7 +172,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4ea39f1b093dcc844a4b69108f8d7418, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -220,6 +230,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+<<<<<<< Updated upstream
 --- !u!114 &827638435090744828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +268,9 @@ MonoBehaviour:
   maxHealth: 100
   damageOnHit: 10
 --- !u!114 &4615236081810157417
+=======
+--- !u!114 &8221059059035787698
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,3 +282,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e81fd885dde9ee49af53fcfa30b1231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
+=======
+--- !u!114 &3542286583053208673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6290881262363176659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3829cf47d65e5f148a0a40ae32d71b62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSlider: {fileID: 0}
+  healthText: {fileID: 0}
+  maxHealth: 100
+--- !u!114 &7589695571222959921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6290881262363176659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1802827412e62d743b67b920ffb0cc0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 6
+  jumpForce: 12
+  groundCheck: {fileID: 0}
+  groundCheckRadius: 0.12
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  rb: {fileID: 0}
+  animator: {fileID: 0}
+  healthManager: {fileID: 0}
+  healthSlider: {fileID: 0}
+  healthText: {fileID: 0}
+  isGrounded: 0
+  isFacingRight: 1
+--- !u!1 &7306074233620938835
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4908306697830329336}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4908306697830329336
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7306074233620938835}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0094, y: -0.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6883345054214805117}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Stashed changes
