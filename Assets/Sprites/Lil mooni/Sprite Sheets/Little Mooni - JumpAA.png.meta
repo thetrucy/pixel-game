@@ -1,0 +1,832 @@
+fileFormatVersion: 2
+guid: fd0bed1021ffa634f9e6cf3104eb5d26
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -710525845675687349
+    second: Little Mooni - JumpAA_0
+  - first:
+      213: -288127431984358884
+    second: Little Mooni - JumpAA_1
+  - first:
+      213: -5613462620275269466
+    second: Little Mooni - JumpAA_2
+  - first:
+      213: 1106594007507852959
+    second: Little Mooni - JumpAA_3
+  - first:
+      213: 7535512357291556126
+    second: Little Mooni - JumpAA_4
+  - first:
+      213: 650722887809727401
+    second: Little Mooni - JumpAA_5
+  - first:
+      213: 3921454468499259921
+    second: Little Mooni - JumpAA_6
+  - first:
+      213: 326842367767520717
+    second: Little Mooni - JumpAA_7
+  - first:
+      213: -7406266286060810200
+    second: Little Mooni - JumpAA_8
+  - first:
+      213: -4377506437343732852
+    second: Little Mooni - JumpAA_9
+  - first:
+      213: -8756386016361618454
+    second: Little Mooni - JumpAA_10
+  - first:
+      213: -3592355507336145492
+    second: Little Mooni - JumpAA_11
+  - first:
+      213: -483505536869189917
+    second: Little Mooni - JumpAA_12
+  - first:
+      213: 2571468961566684915
+    second: Little Mooni - JumpAA_13
+  - first:
+      213: -2069291488019102025
+    second: Little Mooni - JumpAA_14
+  - first:
+      213: -1164882201150433637
+    second: Little Mooni - JumpAA_15
+  - first:
+      213: 7230349127177248308
+    second: Little Mooni - JumpAA_16
+  - first:
+      213: 5180433319098232565
+    second: Little Mooni - JumpAA_17
+  - first:
+      213: -963062093002328420
+    second: Little Mooni - JumpAA_18
+  - first:
+      213: 9198898048484248568
+    second: Little Mooni - JumpAA_19
+  - first:
+      213: -455601383026474879
+    second: Little Mooni - JumpAA_20
+  - first:
+      213: -7767408888466993645
+    second: Little Mooni - JumpAA_21
+  - first:
+      213: -6705546205819560092
+    second: Little Mooni - JumpAA_22
+  - first:
+      213: 4302074278498327578
+    second: Little Mooni - JumpAA_23
+  - first:
+      213: 1005265416131215202
+    second: Little Mooni - JumpAA_24
+  - first:
+      213: -8786282769753239239
+    second: Little Mooni - JumpAA_25
+  - first:
+      213: 7101181785911894103
+    second: Little Mooni - JumpAA_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_0
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 62
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4244c40284b326f0800000000000000
+      internalID: -710525845675687349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_1
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 43
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1ad68e80ad500cf0800000000000000
+      internalID: -288127431984358884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_2
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 92
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a02f8efc79f812b0800000000000000
+      internalID: -5613462620275269466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_3
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 96
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9ed41803696b5f00800000000000000
+      internalID: 1106594007507852959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_4
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 81
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1dfde86094839860800000000000000
+      internalID: 7535512357291556126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_5
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 53
+        width: 73
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ab7d1fc405d70900800000000000000
+      internalID: 650722887809727401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_6
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 62
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11244c5ff0ecb6630800000000000000
+      internalID: 3921454468499259921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_7
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 62
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc5a45cd66d298400800000000000000
+      internalID: 326842367767520717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_8
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 62
+        width: 36
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 820d46b8d08a73990800000000000000
+      internalID: -7406266286060810200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_9
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 62
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8b14289619ff33c0800000000000000
+      internalID: -4377506437343732852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_10
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 48
+        width: 61
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae3619abf411b7680800000000000000
+      internalID: -8756386016361618454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_11
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 62
+        width: 12
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca59f4ef2b3652ec0800000000000000
+      internalID: -3592355507336145492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_12
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 52
+        width: 59
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e63af3a64e3a49f0800000000000000
+      internalID: -483505536869189917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_13
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 69
+        width: 8
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f6ff157561bfa320800000000000000
+      internalID: 2571468961566684915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_14
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 52
+        width: 37
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b6c1efea566843e0800000000000000
+      internalID: -2069291488019102025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_15
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 51
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b96d0435fc185dfe0800000000000000
+      internalID: -1164882201150433637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_16
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 62
+        width: 35
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43e947f193c575460800000000000000
+      internalID: 7230349127177248308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_17
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 62
+        width: 34
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fea27718a894e740800000000000000
+      internalID: 5180433319098232565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_18
+      rect:
+        serializedVersion: 2
+        x: 1918
+        y: 62
+        width: 34
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c96b3f1012482a2f0800000000000000
+      internalID: -963062093002328420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_19
+      rect:
+        serializedVersion: 2
+        x: 2062
+        y: 62
+        width: 34
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fb00f8890d09af70800000000000000
+      internalID: 9198898048484248568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_20
+      rect:
+        serializedVersion: 2
+        x: 2206
+        y: 62
+        width: 34
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 180c78db4f06da9f0800000000000000
+      internalID: -455601383026474879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_21
+      rect:
+        serializedVersion: 2
+        x: 2350
+        y: 62
+        width: 36
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e86b9f4ce943490800000000000000
+      internalID: -7767408888466993645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_22
+      rect:
+        serializedVersion: 2
+        x: 2494
+        y: 62
+        width: 36
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46f1829d04d11f2a0800000000000000
+      internalID: -6705546205819560092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_23
+      rect:
+        serializedVersion: 2
+        x: 2638
+        y: 62
+        width: 36
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1cdc3f43c904bb30800000000000000
+      internalID: 4302074278498327578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_24
+      rect:
+        serializedVersion: 2
+        x: 2797
+        y: 62
+        width: 27
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26f7c71e19b63fd00800000000000000
+      internalID: 1005265416131215202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_25
+      rect:
+        serializedVersion: 2
+        x: 2941
+        y: 62
+        width: 27
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93119b46f5ad01680800000000000000
+      internalID: -8786282769753239239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Little Mooni - JumpAA_26
+      rect:
+        serializedVersion: 2
+        x: 3082
+        y: 62
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 750a0cae5377c8260800000000000000
+      internalID: 7101181785911894103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Little Mooni - JumpAA_0: -710525845675687349
+      Little Mooni - JumpAA_1: -288127431984358884
+      Little Mooni - JumpAA_10: -8756386016361618454
+      Little Mooni - JumpAA_11: -3592355507336145492
+      Little Mooni - JumpAA_12: -483505536869189917
+      Little Mooni - JumpAA_13: 2571468961566684915
+      Little Mooni - JumpAA_14: -2069291488019102025
+      Little Mooni - JumpAA_15: -1164882201150433637
+      Little Mooni - JumpAA_16: 7230349127177248308
+      Little Mooni - JumpAA_17: 5180433319098232565
+      Little Mooni - JumpAA_18: -963062093002328420
+      Little Mooni - JumpAA_19: 9198898048484248568
+      Little Mooni - JumpAA_2: -5613462620275269466
+      Little Mooni - JumpAA_20: -455601383026474879
+      Little Mooni - JumpAA_21: -7767408888466993645
+      Little Mooni - JumpAA_22: -6705546205819560092
+      Little Mooni - JumpAA_23: 4302074278498327578
+      Little Mooni - JumpAA_24: 1005265416131215202
+      Little Mooni - JumpAA_25: -8786282769753239239
+      Little Mooni - JumpAA_26: 7101181785911894103
+      Little Mooni - JumpAA_3: 1106594007507852959
+      Little Mooni - JumpAA_4: 7535512357291556126
+      Little Mooni - JumpAA_5: 650722887809727401
+      Little Mooni - JumpAA_6: 3921454468499259921
+      Little Mooni - JumpAA_7: 326842367767520717
+      Little Mooni - JumpAA_8: -7406266286060810200
+      Little Mooni - JumpAA_9: -4377506437343732852
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
