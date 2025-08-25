@@ -70,8 +70,13 @@ For every new task (e.g., "add player shooting"), follow these steps:
 
 **Analysis**
 
+* **Decision:** Accept. I keep the full response from AI because this is the basis of our project, we must follow or else we might mess up.
+
+* We accept the advice from AI and created a game planner, divide the project into chunks and plan ahead what we should do. This piece of advice is essential for beginners to start making game with Unity. 
+* **Result:** With the before-hand plan. we reduce conflict on github, and have better sharing jobs.
+
 ----
-**Prompt** : We now have ideas for our game: a 2D-sideview like DeadCells or Hollow Knight, but simpler version. What classes should be include, briefly explain how 4 OOP principles would be included in those classes
+**Prompt** : We now have ideas for our game: a 2D-sideview game with tone like DeadCells or Hollow Knight, but simpler version. What classes should be include, briefly explain how 4 OOP principles would be included in those classes
 
 **Response**: For a simpler 2D side-scroller, you should start with a few core classes. Your main goal is to create reusable and manageable code.
 
@@ -87,29 +92,85 @@ Here are the essential classes you'll likely need:
 
 * Weapon: A class to define how a weapon behaves, including its damage, attack speed, and visual effects.
 
-1.  Inheritance
+**OOP principles**
 
-Inheritance allows a class to receive properties and methods from another class. This avoids code duplication.
+1. Inheritance: Use Character as a base class to share logic (e.g., health, TakeDamage()) between Player and Enemy.
 
-Example: Both your Player and Enemy classes will need variables for health and moveSpeed, and methods like TakeDamage().
+2. Encapsulation: Bundle data (variables) and methods within a class, hiding internal details.
 
-2.  Encapsulation
+3. Polymorphism: The base Character class can have a virtual Attack() method that Player and Enemy override for their specific attack behaviors.
 
-Encapsulation means bundling data (variables) and the methods that operate on that data into a single unit (a class), and hiding the data from outside access.
-
-3. Polymorphism
-   
-Polymorphism allows objects of different classes to be treated as objects of a common superclass. It's often used with inheritance or interfaces to perform a single action in different ways.
-
-Example: Your base Character class could have a virtual method called Attack().
-
-The Player class would override Attack() to swing its equipped Weapon.
-
-The Enemy class would override Attack() to perform a simple lunge.
-
-4. Abstraction
-
-Abstraction means hiding complex implementation details and only showing the necessary features of an object. It focuses on what an object does, not how it does it.
+4. Abstraction: Hide complex implementation details to show only necessary features.
 
 
 **Analysis**
+
+---
+
+**Prompt** What are the most used design patterns in game making?
+
+**Response**
+
+**1. Singleton:**
+Ensures a class has only one instance and provides a global access point.
+
+* Use Case: Ideal for a GameManager, AudioManager, or a PlayerManager because they should only exist once in the game.
+
+**2. Observer (Event System):**
+Creates a one-to-many dependency so that when one object changes, others are notified automatically.
+
+* Use Case: Perfect for decoupled systems like a player health bar. The player can "publish" a PlayerDamaged event, and the health bar "subscribes" to it to update.
+
+**3. State Pattern:** 
+Allows an object to change its behavior when its internal state changes.
+
+* Use Case: Excellent for managing enemy or boss AI. Instead of using a large if/else statement, you can have separate states like Patrolling, Chasing, or Attacking.
+
+
+**Analysis**
+
+* **Decision:** Accept
+* **Resoning:** We use these design patterns as the recommended but still need futher research and modify to decide in which should we use design pattern in our project.
+
+## Phase 2: Implementation & Iteration
+
+
+**Prompt:** "Can you provide a tutorial on how to create UI in Unity, including a main menu and win/lose screens, and explain how to connect those scenes to the gameplay scene?"
+
+**AI Response:** To build your UI, create panels for your menus and use buttons for navigation. Link these buttons to methods in a `MenuManager` script. Use the `SceneManager.LoadScene()` function within these methods to transition between your menu and gameplay scenes.
+
+**My Analysis:** Reject. The tutorial is vague and hard to understand, the button not work. I therefore asked for tutorial on youtube.
+
+---
+
+**Prompt:** "Could you recommend some valuable YouTube tutorials for learning 2D Unity development?"
+
+**AI Response:** For learning 2D Unity, explore popular channels like Brackeys (archived tutorials), Code Monkey, and Blackthornprod. They cover fundamentals of 2D development, UI design, and player mechanics.
+
+**My Analysis:** We used these resources to strengthen my understanding of Unity workflows and UI.
+
+---
+
+**Prompt:** "Why does my PlayerController script automatically get disabled during runtime?"
+
+**AI Response:** Your script might be disabled due to an unhandled exception or error. Check the Unity Console for specific error messages and verify that all components and scripts are properly attached.
+
+**My Analysis:** Not fully accept, I still need a few prompt before I identified and fixed a null error in my PlayerController, which was causing Unity to disable the component automatically.
+
+---
+
+**Prompt:** "Why does `Application.Quit()` not work when I test my game in Unity?"
+
+**AI Response:** Explained that `Application.Quit()` only works in a built application, not inside the Unity Editor. Suggested testing it after building the project.
+
+**My Analysis:** This clarified why the quit button seemed broken. I confirmed it worked correctly after building the executable.
+
+---
+
+**Prompt:** "How can I build my Unity project into a .exe file, and is it possible to run it on Linux?"
+
+**AI Response:** Use Unity's Build Settings to export your project as a Windows executable `(.exe)`. To run the game on Linux, you must create a separate Linux-native build through Unity. A `.exe` file cannot be run natively on Linux without a compatibility tool like Wine.
+
+**My Analysis:** I followed this advice to build a Windows version of the game. I also learned that you need to build game for Mac, Linux differently.
+
+---
