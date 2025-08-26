@@ -4,7 +4,6 @@ public class JumpAttackState : PlayerState
 {
     private float lockDuration = 0.4f;  // thời gian khóa hướng
     private float timer;
-    private bool canChangeDirection = false;
     private float lockedDirection; // -1 (trái), +1 (phải)
 
     public JumpAttackState(PlayerController player) : base(player) { }
@@ -12,7 +11,6 @@ public class JumpAttackState : PlayerState
     public override void Enter()
     {
         timer = 0f;
-        canChangeDirection = false;
 
         lockedDirection = player.isFacingRight ? 1f : -1f;
 

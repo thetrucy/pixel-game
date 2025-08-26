@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4254130567614482187}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,8 +40,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 63689639837187166}
-  - component: {fileID: 2761809180620386269}
-  m_Layer: 9
+  - component: {fileID: 65974729767489347}
+  m_Layer: 0
   m_Name: hitboxJAA
   m_TagString: PlayerHitbox
   m_Icon: {fileID: 0}
@@ -63,8 +63,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6883345054214805117}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2761809180620386269
-BoxCollider2D:
+--- !u!60 &65974729767489347
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -97,7 +97,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.009253621, y: -0.011429265}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -107,8 +107,24 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.98149276, y: 0.9771415}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.09893355, y: 0.47049373}
+      - {x: -0.3327216, y: 0.39387372}
+      - {x: -0.219047, y: 0.083218224}
+      - {x: -0.10337177, y: 0.1173702}
+      - {x: 0.021050364, y: 0.11974062}
+      - {x: 0.09239438, y: 0.05830052}
+      - {x: 0.12610213, y: -0.07895942}
+      - {x: -0.027178816, y: -0.13563575}
+      - {x: -0.2575692, y: -0.08676645}
+      - {x: -0.5088268, y: -0.17511566}
+      - {x: -0.32628617, y: -0.43732822}
+      - {x: 0.15623096, y: -0.49966997}
+      - {x: 0.36032856, y: -0.37794486}
+      - {x: 0.46411836, y: -0.28969344}
+      - {x: 0.39592904, y: 0.20040038}
+  m_UseDelaunayMesh: 0
 --- !u!1 &3449370869978502007
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,8 +134,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2648524395233922076}
-  - component: {fileID: 57180143603906457}
-  m_Layer: 9
+  - component: {fileID: 1886947529542757464}
+  m_Layer: 0
   m_Name: hitboxAA2
   m_TagString: PlayerHitbox
   m_Icon: {fileID: 0}
@@ -141,8 +157,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6883345054214805117}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &57180143603906457
-BoxCollider2D:
+--- !u!60 &1886947529542757464
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -185,8 +201,21 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.0039864974, y: 0.49139082}
+      - {x: -0.5683676, y: 0.3745196}
+      - {x: -0.68777657, y: 0.081032544}
+      - {x: -0.6051506, y: -0.3636933}
+      - {x: -0.49072558, y: -0.047839858}
+      - {x: -0.34309983, y: 0.043401033}
+      - {x: -0.289239, y: 0.22609234}
+      - {x: -0.113876075, y: 0.26913136}
+      - {x: 0.0800446, y: -0.08053077}
+      - {x: 0.018138647, y: -0.4853565}
+      - {x: 0.46819514, y: -0.48920965}
+      - {x: 0.41290015, y: 0.008475244}
+  m_UseDelaunayMesh: 0
 --- !u!1 &6290881262363176659
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,8 +232,7 @@ GameObject:
   - component: {fileID: 827638435090744828}
   - component: {fileID: 1342051387724127103}
   - component: {fileID: 4615236081810157417}
-  - component: {fileID: 577986460736550443}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -272,8 +300,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1224110335
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -5068957719752289226, guid: a82e99bfffed73946b50d82ea67512a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -401,6 +429,7 @@ MonoBehaviour:
   fallMultiplier: 5
   isFacingRight: 1
   isGrounded: 1
+  isDead: 0
   hitboxJAA: {fileID: 1906308517592323041}
 --- !u!114 &1342051387724127103
 MonoBehaviour:
@@ -433,52 +462,6 @@ MonoBehaviour:
   hitboxAA1: {fileID: 8191076848976819728}
   hitboxAA2: {fileID: 3449370869978502007}
   hitboxAA3: {fileID: 6700268089088077615}
---- !u!61 &577986460736550443
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6290881262363176659}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0.03125, y: 0, z: 0.0625, w: 0.1875}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
-    newSize: {x: 0.28, y: 0.22}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.5, y: 0.5}
-  m_EdgeRadius: 0
 --- !u!1 &6700268089088077615
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,8 +471,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2859452617996047360}
-  - component: {fileID: 7243918269455700979}
-  m_Layer: 9
+  - component: {fileID: 7739622543290005009}
+  m_Layer: 0
   m_Name: hitboxAA3
   m_TagString: PlayerHitbox
   m_Icon: {fileID: 0}
@@ -511,8 +494,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6883345054214805117}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &7243918269455700979
-BoxCollider2D:
+--- !u!60 &7739622543290005009
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -555,8 +538,15 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.27663326, y: 0.52417666}
+      - {x: -0.33395118, y: 0.08362728}
+      - {x: -0.41754925, y: -0.4333672}
+      - {x: 0.31062675, y: -0.46386513}
+      - {x: 0.4246424, y: -0.28310704}
+      - {x: 0.5041869, y: 0.5093638}
+  m_UseDelaunayMesh: 0
 --- !u!1 &8191076848976819728
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,8 +556,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8852476267527545938}
-  - component: {fileID: 2519711329464857299}
-  m_Layer: 9
+  - component: {fileID: 2887774222884577804}
+  m_Layer: 0
   m_Name: hitboxAA1
   m_TagString: PlayerHitbox
   m_Icon: {fileID: 0}
@@ -589,8 +579,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6883345054214805117}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2519711329464857299
-BoxCollider2D:
+--- !u!60 &2887774222884577804
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -626,12 +616,28 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.35140926, y: 0.2193297}
+      - {x: 0.14788328, y: 0.5301205}
+      - {x: -0.14310026, y: 0.36137062}
+      - {x: -0.1431155, y: 0.32107547}
+      - {x: 0.07978195, y: 0.27829742}
+      - {x: 0.1743158, y: 0.10739531}
+      - {x: 0.13584918, y: 0.027381204}
+      - {x: 0.052098226, y: -0.046107806}
+      - {x: -0.11996635, y: -0.06183242}
+      - {x: -0.22257647, y: -0.09468569}
+      - {x: -0.3584205, y: -0.15669075}
+      - {x: -0.50516653, y: -0.45686924}
+      - {x: 0.3479896, y: -0.4568691}
+      - {x: 0.4056194, y: -0.31728864}
+      - {x: 0.45534423, y: -0.028757095}
+  m_UseDelaunayMesh: 0

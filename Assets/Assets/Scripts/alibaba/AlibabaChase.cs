@@ -33,7 +33,6 @@ namespace Enemies.Alibaba
 
             player = GameObject.FindGameObjectWithTag("Player")?.transform;
 
-            // ❌ Không cần IgnoreCollision nữa
         }
 
         protected override void Update()
@@ -53,7 +52,7 @@ namespace Enemies.Alibaba
                 isHeadbutting = true;
 
                 // Dash ngang theo vị trí Player
-                dashDirection = new Vector2(Mathf.Sign(player.position.x - transform.position.x), 0f);
+                dashDirection = new Vector2(Mathf.Sign(player.position.x - transform.position.x), 0f).normalized;
 
                 if (animator != null)
                 {

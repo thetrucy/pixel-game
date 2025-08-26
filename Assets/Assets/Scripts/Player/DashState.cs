@@ -4,7 +4,7 @@ using System.Linq;
 
 public class DashState : PlayerState
 {
-    private float dashSpeed = 20f;
+    private float dashSpeed = 30f;
     private float dashDuration = 0.4f;
     private float originalGravity;
     private float originalAnimatorSpeed;

@@ -11,6 +11,8 @@ public class EnemyManager : MonoBehaviour
 
     private int monsterCount = 0;
 
+    public int GetmonsterCount() => monsterCount;
+
     private void Awake()
     {
         // Singleton setup

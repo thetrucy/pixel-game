@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f80f84b6e00fc34392756b2fc564b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8850212390820095607, guid: 733e5c0b37086aa4a84b623fb82fc0c8, type: 3}
+  enemyPrefab: {fileID: 0}
   timeBetweenWaves: 5
   enemiesPerWave: 1
   wavesToSpawn: 3

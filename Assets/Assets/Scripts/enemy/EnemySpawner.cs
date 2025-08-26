@@ -25,6 +25,10 @@ public class EnemySpawner : MonoBehaviour
         // Check if all waves have been spawned
         if (currentWave >= wavesToSpawn)
         {
+            if (EnemyManager.Instance != null && EnemyManager.Instance.GetmonsterCount() == 0)
+            {
+                Debug.Log("All waves completed and all enemies defeated!");
+            }
             return;
         }
 

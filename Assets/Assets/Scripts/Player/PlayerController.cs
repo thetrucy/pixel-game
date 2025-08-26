@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 
     public bool isFacingRight = true;
     public bool isGrounded = false;
+    public bool isDead = false;    
 
     private PlayerState currentState;
     public GameObject hitboxJAA;
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (isDead) return;
         ComboAttack combo = GetComponent<ComboAttack>();
 
         if (combo != null && combo.IsAttacking() && Input.GetKeyDown(KeyCode.LeftShift))
@@ -63,6 +65,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (isDead)
+        {
+            rb.linearVelocity = Vector2.zero; // khóa vị trí
+            return;
+        }
         ComboAttack combo = GetComponent<ComboAttack>();
         if (combo != null && combo.IsAttacking())
         {
