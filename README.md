@@ -19,9 +19,9 @@ but with a simplified scope. Players will combat with enemies to complete level.
 
 ## How to Play
 ### Controls
-* **Movement:** WASD (W: Jump, A: Left, S: Heal, D: Right)
-
-* **Dash:** Spacebar
+* **Movement:** WAD (W: Jump, A: Left, D: Right)
+* **Heal:** H
+* **Dash:** Left shift
 
 * **Attack/Combo Attack:** Left Mouse Click
 
@@ -33,7 +33,7 @@ Defeat all enemies in the level.
 To get the project running on your local machine, follow these steps:
 
 ### Prerequisites
-Unity Editor: Version 2022.3.15f1 (LTS) or later. It's crucial that all team members use the exact same Unity version to avoid compatibility issues.
+Unity Editor.
 
 Git: Installed on your system for version control.
 
