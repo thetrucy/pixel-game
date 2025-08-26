@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     public GameObject mainMenuPanel;
-    public GameObject settingsPanel;
     public GameObject playPanel;
 
     void Start() {
@@ -18,13 +17,6 @@ public class MenuManager : MonoBehaviour
         CloseAll();
         mainMenuPanel.SetActive(true);
     }
-
-    public void OpenSettings()
-    {
-        CloseAll();
-        settingsPanel.SetActive(true);
-    }
-
 
     public void OpenPlayPanel()
     {
@@ -45,7 +37,6 @@ public class MenuManager : MonoBehaviour
 
     private void CloseAll()
     {
-        settingsPanel.SetActive(false);
         playPanel.SetActive(false);
     }
 }

@@ -22,7 +22,6 @@ namespace Enemies.Alibaba
         private bool isHeadbutting = false;
         private Animator animator;
         private Vector2 dashDirection;
-
         private bool canDamage = false;
 
         protected override void Start()
@@ -33,45 +32,41 @@ namespace Enemies.Alibaba
 
             player = GameObject.FindGameObjectWithTag("Player")?.transform;
 
-            // ❌ Không cần IgnoreCollision nữa
+            // Ignore collision với player
+            if (player != null)
+            {
+                Collider2D enemyCol = GetComponent<Collider2D>();
+                Collider2D playerCol = player.GetComponent<Collider2D>();
+                if (enemyCol != null && playerCol != null)
+                    Physics2D.IgnoreCollision(enemyCol, playerCol, true);
+            }
         }
 
         protected override void Update()
         {
             if (player == null || GetComponent<AlibabaHealth>().isDead) return;
 
-            // Đếm ngược hồi chiêu
+            // cooldown headbutt
             if (headbuttCooldownTimer > 0)
                 headbuttCooldownTimer -= Time.deltaTime;
 
             float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-            // Kích hoạt headbutt
-            if (headbuttCooldownTimer <= 0 && distanceToPlayer <= headbuttRange && !isHeadbutting)
+            // trigger dash + anim
+            if (!isHeadbutting && headbuttCooldownTimer <= 0 && distanceToPlayer <= headbuttRange)
             {
-                headbuttCooldownTimer = headbuttCooldown;
                 isHeadbutting = true;
+                headbuttCooldownTimer = headbuttCooldown;
 
-                // Dash ngang theo vị trí Player
                 dashDirection = new Vector2(Mathf.Sign(player.position.x - transform.position.x), 0f);
 
                 if (animator != null)
-                {
-                    var attackClip = animator.runtimeAnimatorController.animationClips
-                        .FirstOrDefault(c => c.name == "Attack");
-                    if (attackClip != null)
-                    {
-                        animator.speed = attackClip.length / dashDuration;
-                    }
-
                     animator.SetTrigger(headbuttTrigger);
-                    Debug.Log("Alibaba kích hoạt húc đầu!");
-                }
 
                 StartCoroutine(DashRoutine());
             }
 
-            // Nếu không dash thì chase bình thường
+            // chase bình thường nếu không dash
             if (!isHeadbutting)
             {
                 Vector2 moveDir = GetChaseDirection();
@@ -84,37 +79,26 @@ namespace Enemies.Alibaba
 
         private IEnumerator DashRoutine()
         {
-            canDamage = true; // Cho phép gây damage
-
+            canDamage = true;
             rb.linearVelocity = dashDirection * dashSpeed;
 
             yield return new WaitForSeconds(dashDuration);
 
-            // Kết thúc dash
+            // kết thúc dash
             isHeadbutting = false;
             canDamage = false;
-
             rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
-
-            if (animator != null)
-            {
-                animator.speed = 1f; // Reset speed
-                animator.ResetTrigger(headbuttTrigger);
-            }
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (canDamage && other.CompareTag("Player"))
             {
-                HealthManager playerHealth = other.GetComponent<HealthManager>()
-                                            ?? other.GetComponentInParent<HealthManager>();
-
+                HealthManager playerHealth = other.GetComponent<HealthManager>() ?? other.GetComponentInParent<HealthManager>();
                 if (playerHealth != null)
                 {
                     playerHealth.TakeDamage((int)headbuttDamage);
-                    Debug.Log($"Alibaba húc đầu gây {headbuttDamage} sát thương!");
-                    canDamage = false;
+                    canDamage = false; // chỉ damage 1 lần trên collider
                 }
             }
         }
@@ -127,7 +111,7 @@ namespace Enemies.Alibaba
         private void OnDisable()
         {
             if (animator != null)
-                animator.speed = 1f;
+                animator.ResetTrigger(headbuttTrigger);
         }
 
         private void OnDrawGizmosSelected()

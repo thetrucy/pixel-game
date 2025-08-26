@@ -37,6 +37,7 @@ public class AlibabaHealth : EnemyHealthSystem
         AlibabaChase chase = GetComponent<AlibabaChase>();
         if (chase != null) chase.enabled = false;
 
+        base.Die();
         Destroy(gameObject, 1.01f);
     }
 }
