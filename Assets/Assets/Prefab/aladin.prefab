@@ -18,11 +18,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: dccf49e5131a6b040b6ff61b97db595c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1
+      value: 7.47
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: dccf49e5131a6b040b6ff61b97db595c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5
+      value: -1.82
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: dccf49e5131a6b040b6ff61b97db595c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cbb3d74d5d2a8a4bb1405244009b488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 6883345054214805117, guid: 7c2e589e04c58e24b9ecbf1d0533758d, type: 3}
+  player: {fileID: 0}
   moveSpeed: 1.5
   stopDistance: 3
   tolerance: 0.1
@@ -180,6 +180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc191c627efb414d8cf98617f1d87b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  maxHealth: 10
   damageCooldown: 0.35
   hitEffectPrefab: {fileID: 6001080541412123654, guid: 4c577129a0babaa4790f9ff3659e7c5d, type: 3}

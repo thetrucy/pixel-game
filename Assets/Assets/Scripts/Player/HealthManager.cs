@@ -2,7 +2,9 @@ using UnityEngine; using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
-    public Image healthBar; public int currentHealth; public int maxHealth = 100;
+    public Image healthBar;
+    public int currentHealth;
+    public int maxHealth = 100;
     [Header("Damage Settings")]
     public int damageOnHit = 10;
 

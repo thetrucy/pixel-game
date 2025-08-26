@@ -43,11 +43,17 @@ public class EnemySpawner : MonoBehaviour
     {
         for (int i = 0; i < enemiesPerWave; i++)
         {
-            // Spawn an enemy at the spawner's position
-            Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+
+            // Báo cho manager có thêm quái
+            if (EnemyManager.Instance != null)
+            {
+                EnemyManager.Instance.RegisterEnemy();
+            }
         }
-        
-        currentWave++; // Increment the wave counter
+
+        currentWave++;
         Debug.Log($"Wave {currentWave} spawned!");
     }
+
 }

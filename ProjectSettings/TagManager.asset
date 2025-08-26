@@ -13,10 +13,10 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Enemy body
+  - Enemy hitbox
+  - PlayerBody
+  - PlayerHitBox
   - 
   - 
   - 
@@ -42,6 +42,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 1224110335
     locked: 0
   - name: effect
     uniqueID: 877799419
