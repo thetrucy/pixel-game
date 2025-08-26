@@ -20,7 +20,7 @@ but with a simplified scope. Players will combat with enemies to complete level.
 ## How to Play
 ### Controls
 * **Movement:** WAD (W: Jump, A: Left, D: Right)
-* **Heal:** H
+* **Heal:** S
 * **Dash:** Left shift
 
 * **Attack/Combo Attack:** Left Mouse Click
