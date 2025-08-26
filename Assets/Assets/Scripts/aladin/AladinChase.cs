@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Enemies;
 
 namespace Enemies.Aladin
 {
@@ -12,16 +11,22 @@ namespace Enemies.Aladin
         {
             base.Start();
             stopDistance = customStopDistance;
-            Collider2D enemyCol = GetComponent<Collider2D>();
-            Transform player = GameObject.FindGameObjectWithTag("Player")?.transform;
 
-            if (player != null && enemyCol != null)
+            player = GameObject.FindGameObjectWithTag("Player")?.transform;
+
+            if (player != null)
             {
+                Collider2D enemyCol = GetComponent<Collider2D>();
                 Collider2D playerCol = player.GetComponent<Collider2D>();
-                if (playerCol != null)
+
+                if (enemyCol != null && playerCol != null)
                 {
                     Physics2D.IgnoreCollision(enemyCol, playerCol, true);
                 }
+            }
+            else
+            {
+                Debug.LogWarning("'Player' not found!");
             }
         }
     }

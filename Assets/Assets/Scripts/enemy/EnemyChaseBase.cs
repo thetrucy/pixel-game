@@ -6,11 +6,12 @@ namespace Enemies
     public class EnemyChaseBase : MonoBehaviour
     {
         [Header("Chase Settings")]
-        public Transform player;
+        public string playerTag = "Player";
         public float moveSpeed = 1.5f;
         public float stopDistance = 3f;
         public float tolerance = 0.1f;
 
+        protected Transform player;
         protected Rigidbody2D rb;
         protected SpriteRenderer sr;
 
@@ -18,6 +19,16 @@ namespace Enemies
         {
             rb = GetComponent<Rigidbody2D>();
             sr = GetComponent<SpriteRenderer>();
+
+            GameObject playerObj = GameObject.FindGameObjectWithTag(playerTag);
+            if (playerObj != null)
+            {
+                player = playerObj.transform;
+            }
+            else
+            {
+                Debug.LogWarning("⚠ Không tìm thấy Player với tag: " + playerTag);
+            }
         }
 
         protected virtual void Update()
@@ -25,7 +36,6 @@ namespace Enemies
             if (player == null) return;
 
             Vector2 moveDir = GetChaseDirection();
-
             rb.linearVelocity = moveDir * moveSpeed;
 
             if (sr != null)
@@ -34,22 +44,23 @@ namespace Enemies
 
         protected virtual Vector2 GetChaseDirection()
         {
-            float distanceX = Mathf.Abs(transform.position.x - player.position.x);
-            float dirX = Mathf.Sign(player.position.x - transform.position.x);
+            Vector2 direction = (player.position - transform.position);
+            float distance = direction.magnitude;
 
-            if (distanceX > stopDistance + tolerance)
+            if (distance > stopDistance + tolerance)
             {
-                return new Vector2(dirX, 0f);
+                // Di chuyển về phía player
+                return direction.normalized;
             }
-            else if (distanceX < stopDistance - tolerance)
+            else if (distance < stopDistance - tolerance)
             {
-                return new Vector2(-dirX, 0f);
+                // Lùi ra nếu quá gần
+                return -direction.normalized;
             }
             else
             {
-                float targetX = player.position.x - dirX * stopDistance;
-                Vector2 targetPos = new Vector2(targetX, transform.position.y);
-                return (targetPos - (Vector2)transform.position).normalized;
+                // Giữ vị trí nếu ở khoảng cách phù hợp
+                return Vector2.zero;
             }
         }
     }

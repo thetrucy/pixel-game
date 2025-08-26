@@ -1,17 +1,24 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class EnemyHealthSystem : MonoBehaviour
 {
+    [Header("Health Settings")]
     public int maxHealth = 100;
     private int currentHealth;
 
+    [Header("Damage Settings")]
     public float damageCooldown = 0.35f;
     private float lastDamageTime = -Mathf.Infinity;
 
-    private SpriteRenderer spriteRenderer;
+    public event System.Action OnDie;
 
+    [Header("Hit Effect")]
     public GameObject hitEffectPrefab;
+    public string hitEffectSortingLayer = "Foreground";
+    public int hitEffectOrderInLayer = 10;
+    public float defaultEffectLifetime = 0.5f;
+
+    private SpriteRenderer spriteRenderer;
 
     protected virtual void Start()
     {
@@ -36,33 +43,11 @@ public class EnemyHealthSystem : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth < 0) currentHealth = 0;
 
-        // Spawn hiệu ứng hit
-        if (hitEffectPrefab != null)
-        {
-            // Random góc xoay (chỉ xoay Z cho 2D)
-            Quaternion randomRotation = Quaternion.Euler(0, 0, Random.Range(0f, 360f));
+        SpawnHitEffect();
 
-            // Tạo hiệu ứng
-            GameObject effect = Instantiate(
-                hitEffectPrefab,
-                transform.position + new Vector3(0, 4.5f, 0),
-                randomRotation
-            );
-
-            // Tự hủy sau khi animation chạy xong
-            float lifetime = 0.5f; // mặc định 0.5s nếu prefab không có animator
-            Animator anim = effect.GetComponent<Animator>();
-            if (anim != null)
-            {
-                // lấy thời gian clip đầu tiên trong Animator
-                AnimatorClipInfo[] clipInfo = anim.GetCurrentAnimatorClipInfo(0);
-                if (clipInfo.Length > 0)
-                {
-                    lifetime = clipInfo[0].clip.length;
-                }
-            }
-            Destroy(effect, lifetime);
-        }
+        // Camera shake
+        if (CameraShake.Instance != null)
+            StartCoroutine(CameraShake.Instance.Shake(0.1f, 0.05f));
 
         if (currentHealth <= 0)
         {
@@ -70,9 +55,43 @@ public class EnemyHealthSystem : MonoBehaviour
         }
     }
 
+    private void SpawnHitEffect()
+    {
+        if (hitEffectPrefab == null) return;
+
+        // Spawn tại vị trí enemy, z = 0
+        Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y, 0f);
+
+        // Random xoay Z
+        Quaternion randomRotation = Quaternion.Euler(0, 0, Random.Range(0f, 360f));
+
+        GameObject effect = Instantiate(hitEffectPrefab, spawnPos, randomRotation);
+
+        // Set sorting layer nếu có SpriteRenderer
+        SpriteRenderer sr = effect.GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            sr.sortingLayerName = hitEffectSortingLayer;
+            sr.sortingOrder = hitEffectOrderInLayer;
+        }
+
+        // Tự hủy sau khi animation chạy xong
+        float lifetime = defaultEffectLifetime;
+        Animator anim = effect.GetComponent<Animator>();
+        if (anim != null)
+        {
+            AnimatorClipInfo[] clipInfo = anim.GetCurrentAnimatorClipInfo(0);
+            if (clipInfo.Length > 0)
+            {
+                lifetime = clipInfo[0].clip.length;
+            }
+        }
+
+        Destroy(effect, lifetime);
+    }
 
     protected virtual void Die()
     {
-        Destroy(gameObject);
+        OnDie?.Invoke();
     }
 }
