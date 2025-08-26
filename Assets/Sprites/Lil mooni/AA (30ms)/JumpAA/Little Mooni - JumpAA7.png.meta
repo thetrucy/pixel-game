@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Little Mooni - JumpAA7_0: -763314794274400481
+      Little Mooni - JumpAA7_1: -277180415665770213
+      Little Mooni - JumpAA7_2: 1160045674087796067
+      Little Mooni - JumpAA7_3: -928587159894051710
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
