@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Headbutt13_0: 7235295445335546487
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      starfilled_0: 4031769473972743434
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
