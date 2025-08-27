@@ -9,7 +9,7 @@ public class AlibabaHealth : EnemyHealthSystem
 
     protected override void Start()
     {
-        maxHealth = 15;
+        maxHealth = 20;
         base.Start();
 
         rb = GetComponent<Rigidbody2D>();

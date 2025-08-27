@@ -43,6 +43,13 @@ public class GameManager : MonoBehaviour
         winLossUI.SetActive(true);
         if (winText != null) winText.gameObject.SetActive(true);
         if (loseText != null) loseText.gameObject.SetActive(false);
+        int finalScore = WaveSystem.Instance != null ? WaveSystem.Instance.currentScore : 0;
+        int highestScore = PlayerPrefs.GetInt("HighScore", 0);
+        if (finalScore > highestScore)
+        {
+            PlayerPrefs.SetInt("HighScore", finalScore);
+            PlayerPrefs.Save();
+        }
     }
 
     public void PlayerLoses()
@@ -50,15 +57,23 @@ public class GameManager : MonoBehaviour
         winLossUI.SetActive(true);
         if (winText != null) winText.gameObject.SetActive(false);
         if (loseText != null) loseText.gameObject.SetActive(true);
+        int finalScore = WaveSystem.Instance != null ? WaveSystem.Instance.currentScore : 0;
+        int highestScore = PlayerPrefs.GetInt("HighScore", 0);
+        if (finalScore > highestScore)
+        {
+            PlayerPrefs.SetInt("HighScore", finalScore);
+            PlayerPrefs.Save();
+        }
     }
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(mainMenuSceneName);
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
     }
 
-    public void QuitGame()
+    public void QuitToMainMenu()
     {
-        Application.Quit();
+        SceneManager.LoadScene(mainMenuSceneName);
     }
 }

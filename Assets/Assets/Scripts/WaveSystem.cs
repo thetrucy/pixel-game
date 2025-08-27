@@ -25,9 +25,15 @@ public class WaveSystem : MonoBehaviour
     public TextMeshProUGUI waveText;
     public TextMeshProUGUI waveAnnouncementText;
     public TextMeshProUGUI enemiesLeftText;
+    public TextMeshProUGUI scoreText;
     public float waveAnnouncementDuration = 2f;
 
+    [Header("Score Settings")]
+    public int pointsPerEnemy = 100;
+    public int pointsPerWave = 1000;
+
     private int currentWave = 0;
+    public int currentScore = 0;
     [HideInInspector] public int totalEnemiesAlive = 0;
 
     private void Awake()
@@ -39,6 +45,7 @@ public class WaveSystem : MonoBehaviour
     private void Start()
     {
         StartCoroutine(WaveLoop());
+        scoreText.text = $"Score: {currentScore}";
     }
 
     private IEnumerator WaveLoop()
@@ -46,7 +53,12 @@ public class WaveSystem : MonoBehaviour
         while (currentWave < maxWaves)
         {
             if (currentWave > 0)
+            {
+                currentScore += pointsPerWave;
+                if (scoreText != null)
+                    scoreText.text = $"Score: {currentScore}";
                 yield return StartCoroutine(ShowWaveAnnouncement("Wave Clear"));
+            }
 
             currentWave++;
 
@@ -71,6 +83,8 @@ public class WaveSystem : MonoBehaviour
             while (totalEnemiesAlive > 0)
                 yield return null;
         }
+        currentScore += 7777;
+        scoreText.text = $"Score: {currentScore}";
 
         GameManager.Instance.PlayerWins();
     }
@@ -134,5 +148,7 @@ public class WaveSystem : MonoBehaviour
     public void EnemyDied()
     {
         totalEnemiesAlive--;
+        currentScore += pointsPerEnemy;
+        scoreText.text = $"Score: {currentScore}";
     }
 }

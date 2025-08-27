@@ -14,7 +14,7 @@ public class AladinHealth : EnemyHealthSystem
 
     protected override void Start()
     {
-        maxHealth = 15;
+        maxHealth = 10;
         animator = GetComponent<Animator>();
 
         if (explosionCollider != null)
